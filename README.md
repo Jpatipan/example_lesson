@@ -93,3 +93,15 @@ def prime_generator(limit):
     for num in range(2, limit + 1):
         if is_prime(num):
             yield num
+
+# Fibonacci Generator
+def fibonacci_generator(n):
+    a, b = 0, 1
+    for _ in range(n):
+        yield a
+        a, b = b, a + b
+
+# ตัวอย่างการใช้งาน
+fib_numbers = fibonacci_generator(10)  # หาตัวเลข Fibonacci 10 ตัวแรก
+for num in fib_numbers:
+    print(num)
