@@ -93,6 +93,12 @@ def prime_generator(limit):
     for num in range(2, limit + 1):
         if is_prime(num):
             yield num
+            
+# ตัวอย่างการใช้งาน
+prime_numbers = prime_generator(50)
+for prime in prime_numbers:
+    print(prime)
+
 
 # Fibonacci Generator
 def fibonacci_generator(n):
